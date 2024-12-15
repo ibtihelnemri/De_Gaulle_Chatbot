@@ -17,6 +17,7 @@ initialize_chat(GENERAL_DE_GAULLE_PROMPT)
 
 # Layout configuration
 st.title("Chatbot Général de Gaulle")
+
 # Add the image
 image = Image.open("assets/De_Gaulle.jpg")
 resized_image = image.resize((int(image.width * 1.8), int(image.height * 1.5)))  # Scale to 80% of the original size
@@ -28,15 +29,7 @@ st.sidebar.header("Chatbot Settings")
 temperature = st.sidebar.slider("Response Creativity (Temperature)", 0.0, 1.0, 0.3, 0.1)
 generate_summary_option = st.sidebar.checkbox("Generate English Summary", value=True)
 
-
-# Display chat history
-#for message in st.session_state.chat_history:
-    #if message["role"] == "system":
-        #continue
-    #st.chat_message(message["role"]).markdown(message["content"])
-
 # User input
-#user_query = st.chat_input("Posez votre question au Général (en Français) :")
 user_query = st.chat_input("Posez votre question dans n'importe quelle langue :")
 if user_query:
     #st.chat_message("user").markdown(user_query)
