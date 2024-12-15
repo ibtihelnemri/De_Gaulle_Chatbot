@@ -1,0 +1,34 @@
+# Streamlit Configuration File
+
+[server]
+# Enables Streamlit to run in headless mode (useful for deployment)
+headless = true
+
+# Allow or restrict cross-origin requests (CORS)
+# If deploying to production, it's safer to leave this out or set it to `true`.
+# Note: This setting will be overridden if `enableXsrfProtection=true` is enabled.
+enableCORS = true
+
+# Enable CSRF protection for enhanced security.
+# This conflicts with `enableCORS=false`. Choose one based on your use case.
+enableXsrfProtection = true
+
+[theme]
+# Specifies the base theme for the app (options: "light" or "dark")
+base = "light"
+
+# Customizes the primary color used in the UI
+primaryColor = "#4CAF50"
+
+# Customizes the secondary background color (e.g., sidebar)
+secondaryBackgroundColor = "#F9F9F9"
+
+# Sets the font type for the app (options: "serif", "sans serif", "monospace")
+font = "sans serif"
+
+# Background color for the app's main content
+backgroundColor = "#FFFFFF"
+
+[logger]
+# Sets the logging level (useful for debugging)
+level = "error"
